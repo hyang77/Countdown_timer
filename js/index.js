@@ -15,10 +15,10 @@ window.addEventListener("DOMContentLoaded", () => {
     document.getElementById("hours").innerHTML = hours;
     document.getElementById("minutes").innerHTML = mins;
     document.getElementById("seconds").innerHTML = secs;
+    //do something when the time up
+    if (diff < 0) {
+      clearInterval(x);
+      document.getElementById("container").innerHTML = "Happy Birthday, Haoli!";
+    }
   }, 1000);
-  //do something when the time up
-  if (diff < 0) {
-    clearInterval(x);
-    document.getElementById("container").innerHTML = "Happy Birthday, Haoli!";
-  }
 });
